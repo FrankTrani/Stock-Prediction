@@ -35,14 +35,14 @@ LOGGING_ENABLED = False
 1. Clone the repository:
 
    ```bash
-   git clone <repository-url>
-   cd <repository-directory>
+   git clone https://github.com/FrankTrani/Stock-Prediction
+   cd Stock-Prediction
    ```
 
 2. (Optional) Create a virtual environment:
 
    ```bash
-   python3 -m venv venv
+   python -m venv venv
    source venv/bin/activate  # On Windows: venv\Scripts\activate
    ```
 
@@ -51,11 +51,15 @@ LOGGING_ENABLED = False
    ```bash
    pip install -r requirements.txt
    ```
+4. ensure all the stocks you want to use are in 'new.txt'
 
-4. Run the analysis:
+5. run nessissary code:
 
    ```bash
-   python your_script_name.py
+   python create.py
+   python add.py
+   python app.py
+
    ```
 
 ---
