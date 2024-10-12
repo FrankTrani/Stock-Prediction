@@ -1,0 +1,12 @@
+yfinance
+pandas
+numpy
+scipy
+SQLAlchemy
+tqdm
+requests
+python-dateutil
+pytz
+tabulate
+subprocess
+
