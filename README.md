@@ -1,7 +1,3 @@
-Here’s the updated version of your `README.md` based on your request:
-
----
-
 # **Small Python Project to Predict Stock Movement and Best Buy Times**
 
 ## **Use**
@@ -84,7 +80,3 @@ Logs are divided into two files:
 - **Lower Z-Score = Better Buy Opportunity:** A lower Z-score suggests the stock is trading below its mean price, which could indicate a good time to buy.
 - Adjust the **`BATCH_SIZE`** if processing too many symbols causes performance issues.
 - Invalid symbols like `"FB"`, `"BRK.B"`, or `"SIVB"` are excluded from analysis. Update the `invalid_symbols` list in the code to add/remove any symbols.
-
----
-
-This `README.md` provides a concise overview of how the script works, what it does, and how to use it. Let me know if you need any further changes!
