@@ -84,3 +84,17 @@ Logs are divided into two files:
 - **Lower Z-Score = Better Buy Opportunity:** A lower Z-score suggests the stock is trading below its mean price, which could indicate a good time to buy.
 - Adjust the **`BATCH_SIZE`** if processing too many symbols causes performance issues.
 - Invalid symbols like `"FB"`, `"BRK.B"`, or `"SIVB"` are excluded from analysis. Update the `invalid_symbols` list in the code to add/remove any symbols.
+
+## More
+
+- intresting bash script to pull all stocks from the US market and put them into a txt file called `test.txt`
+```
+echo -n "$( \
+    echo -en "$( \
+        curl -s --compressed 'ftp://ftp.nasdaqtrader.com/SymbolDirectory/nasdaqlisted.txt' | \
+        tail -n+2 | head -n-1 | perl -pe 's/ //g' | tr '|' ' ' | awk '{printf $1"\n"}' && \
+        curl -s --compressed 'ftp://ftp.nasdaqtrader.com/SymbolDirectory/otherlisted.txt' | \
+        tail -n+2 | head -n-1 | perl -pe 's/ //g' | tr '|' ' ' | awk '{printf $1"\n"}' \
+    )" | grep -v 'Y$' | grep -v '[^a-zA-Z]' | sort \
+)" > test.txt
+```
