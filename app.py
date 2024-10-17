@@ -39,7 +39,7 @@ if LOGGING_ENABLED:
 
     # Handler for WARNING and ERROR messages
     error_handler = logging.handlers.RotatingFileHandler(
-        "logs/errors.log", maxBytes=5 * 1024 * 1024, backupCount=5
+        "logs/errors.log", maxBytes=5 * 1024 * 1024, backupCount=0
     )
     error_handler.setLevel(logging.WARNING)
     error_handler.setFormatter(formatter)
