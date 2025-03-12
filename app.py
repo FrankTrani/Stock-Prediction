@@ -31,7 +31,7 @@ if LOGGING_ENABLED:
 
     # Handler for DEBUG and INFO messages
     info_handler = logging.handlers.RotatingFileHandler(
-        "logs/info.log", maxBytes=5 * 1024 * 1024, backupCount=5
+        "logs/info.log", maxBytes=5 * 1024 * 1024, backupCount=0
     )
     info_handler.setLevel(logging.DEBUG)
     info_handler.setFormatter(formatter)
